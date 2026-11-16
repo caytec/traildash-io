@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>TrailDash.io — Dash out. Close the loop. Own the map.</title>
+  <meta name="description" content="Play TrailDash.io, a fast multiplayer territory game. Dash out, close the loop, cut rival trails and own the map.">
+  <meta name="keywords" content="TrailDash, multiplayer territory game, browser game, Turf Rush, io game">
+  <meta name="theme-color" content="#090b18">
+  <meta name="robots" content="index,follow">
+
+  <link rel="canonical" href="https://traildash.io/">
+  <link rel="icon" href="/social-card.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TrailDash.io">
+  <meta property="og:title" content="TrailDash.io — Own the map">
+  <meta property="og:description" content="Dash out. Close the loop. Cut rival trails. Claim the map in TrailDash.io.">
+  <meta property="og:url" content="https://traildash.io/">
+  <meta property="og:image" content="https://traildash.io/social-card.svg">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TrailDash.io — Own the map">
+  <meta name="twitter:description" content="A fast multiplayer territory game for the browser.">
+  <meta name="twitter:image" content="https://traildash.io/social-card.svg">
+</head>
+<body>
+  <main id="app">
+    <section id="lobby" class="panel">
+      <div class="logo-mark">✦</div>
+
+      <h1>Trail<span>Dash</span><small>.io</small></h1>
+
+      <p class="tagline">
+        Dash out. Close the loop. Own the map.
+      </p>
+
+      <form id="join-form">
+        <label for="nickname">Runner name</label>
+        <input
+          id="nickname"
+          maxlength="16"
+          autocomplete="nickname"
+          placeholder="Your nickname"
+          required
+        >
+
+        <label for="room-code">
+          Private room <em>optional</em>
+        </label>
+        <input
+          id="room-code"
+          maxlength="6"
+          placeholder="Room code"
+        >
+
+        <button type="submit">ENTER THE RUSH</button>
+      </form>
+
+      <div class="help">
+        <strong>How to play</strong>
+        <p>
+          Leave your territory, draw a trail, then return home
+          to claim the enclosed land. Hit rival trails to cut
+          them. Your trail is your attack—and your weakness.
+        </p>
+        <p class="controls">
+          Mouse / touch: steer · Space / button: boost
+        </p>
+      </div>
+
+      <div id="join-error" class="error"></div>
+    </section>
+
+    <section id="game" hidden>
+      <canvas id="game-canvas"></canvas>
+
+      <div id="hud">
+        <div class="brand">
+          TRAIL<span>DASH</span><small>.io</small>
+        </div>
+
+        <div class="match-info">
+          <div id="timer">4:00</div>
+          <div id="phase">LIVE</div>
+        </div>
+
+        <div class="stat-card">
+          <span>LAND</span>
+          <strong id="land-stat">0%</strong>
+        </div>
+
+        <div class="stat-card">
+          <span>CUTS</span>
+          <strong id="kills-stat">0</strong>
+        </div>
+
+        <button id="room-button" class="small-button">
+          ROOM
+        </button>
+      </div>
+
+      <aside id="leaderboard">
+        <h2>TOP RUNNERS</h2>
+        <ol id="leaderboard-list"></ol>
+      </aside>
+
+      <div id="room-toast" class="toast"></div>
+
+      <button id="boost-button" aria-label="Boost">
+        BOOST
+      </button>
+
+      <div id="mobile-hint">
+        Drag anywhere to steer
+      </div>
+    </section>
+
+    <section id="result" class="panel" hidden>
+      <div class="logo-mark">✦</div>
+      <h1 id="result-title">RUSH COMPLETE</h1>
+      <p id="result-subtitle"></p>
+      <div id="result-stats"></div>
+      <button id="rematch-button">RUN IT BACK</button>
+      <button id="back-button" class="secondary">
+        BACK TO LOBBY
+      </button>
+    </section>
+  </main>
+
+  <script src="/game.js"></script>
+</body>
+</html>

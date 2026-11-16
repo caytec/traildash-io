@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">TrailDash.io social card</title>
+  <desc id="desc">Dash out. Close the loop. Own the map.</desc>
+  <defs>
+    <radialGradient id="background" cx="25%" cy="15%" r="100%">
+      <stop offset="0%" stop-color="#202957"/>
+      <stop offset="55%" stop-color="#111633"/>
+      <stop offset="100%" stop-color="#090b18"/>
+    </radialGradient>
+    <linearGradient id="pink" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ff4d8d"/>
+      <stop offset="100%" stop-color="#ff7b54"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#background)"/>
+
+  <path
+    d="M70 470 C210 390 205 175 390 205 S590 475 760 360 S960 150 1130 215"
+    fill="none"
+    stroke="#4cc9f0"
+    stroke-width="10"
+    stroke-linecap="round"
+    opacity=".8"
+  />
+
+  <path
+    d="M110 510 C280 425 310 280 470 300 S660 520 850 420"
+    fill="none"
+    stroke="#ff4d8d"
+    stroke-width="7"
+    stroke-linecap="round"
+    opacity=".9"
+  />
+
+  <circle cx="1020" cy="155" r="24" fill="#ffd166"/>
+  <circle cx="1020" cy="155" r="48" fill="#ffd166" opacity=".12"/>
+
+  <text
+    x="90"
+    y="245"
+    fill="#f8f9ff"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="104"
+    font-weight="900"
+    letter-spacing="-7"
+  >Trail<tspan fill="#ff4d8d">Dash</tspan><tspan fill="#4cc9f0" font-size="48">.io</tspan></text>
+
+  <text
+    x="100"
+    y="330"
+    fill="#a7acc8"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size=" thirty"
+    font-size="30"
+    font-weight="700"
+    letter-spacing="2"
+  >DASH OUT. CLOSE THE LOOP. OWN THE MAP.</text>
+
+  <rect x="100" y="380" width="295" height="64" rx="32" fill="url(#pink)"/>
+  <text
+    x="247"
+    y="421"
+    text-anchor="middle"
+    fill="#ffffff"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="22"
+    font-weight="900"
+  >PLAY NOW</text>
+</svg>
